@@ -1,5 +1,5 @@
-const html = require('choo/html');
-const Component = require('choo/component');
+const html = require("choo/html");
+const Component = require("choo/component");
 
 class Footer extends Component {
   constructor(name, state) {
@@ -19,38 +19,38 @@ class Footer extends Component {
     if (this.state != undefined && this.state.WEB_UI != undefined) {
       const WEB_UI = this.state.WEB_UI;
 
-      if (WEB_UI.FOOTER_DONATE_URL != '') {
+      if (WEB_UI.FOOTER_DONATE_URL != "") {
         links.push(html`
           <li class="m-2">
             <a href="${WEB_UI.FOOTER_DONATE_URL}" target="_blank">
-              ${translate('footerLinkDonate')}
+              ${translate("footerLinkDonate")}
             </a>
           </li>
         `);
       }
-      if (WEB_UI.FOOTER_CLI_URL != '') {
+      if (WEB_UI.FOOTER_CLI_URL != "") {
         links.push(html`
           <li class="m-2">
             <a href="${WEB_UI.FOOTER_CLI_URL}" target="_blank">
-              ${translate('footerLinkCli')}
+              ${translate("footerLinkCli")}
             </a>
           </li>
         `);
       }
-      if (WEB_UI.FOOTER_DMCA_URL != '') {
+      if (WEB_UI.FOOTER_DMCA_URL != "") {
         links.push(html`
           <li class="m-2">
             <a href="${WEB_UI.FOOTER_DMCA_URL}" target="_blank">
-              ${translate('footerLinkDmca')}
+              ${translate("footerLinkDmca")}
             </a>
           </li>
         `);
       }
-      if (WEB_UI.FOOTER_SOURCE_URL != '') {
+      if (WEB_UI.FOOTER_SOURCE_URL != "") {
         links.push(html`
           <li class="m-2">
             <a href="${WEB_UI.FOOTER_SOURCE_URL}" target="_blank">
-              ${translate('footerLinkSource')}
+              ${translate("footerLinkSource")}
             </a>
           </li>
         `);
@@ -59,7 +59,7 @@ class Footer extends Component {
       links.push(html`
         <li class="m-2">
           <a href="https://gitlab.com/timvisee/send" target="_blank">
-            ${translate('footerLinkSource')}
+            ${translate("footerLinkSource")}
           </a>
         </li>
       `);
@@ -70,7 +70,7 @@ class Footer extends Component {
     if (this.state != undefined && this.state.WEB_UI != undefined) {
       const WEB_UI = this.state.WEB_UI;
 
-      if (WEB_UI.CUSTOM_FOOTER_URL != '' && WEB_UI.CUSTOM_FOOTER_TEXT != '') {
+      if (WEB_UI.CUSTOM_FOOTER_URL != "" && WEB_UI.CUSTOM_FOOTER_TEXT != "") {
         footer.push(html`
           <li class="m-2">
             <a href="${WEB_UI.CUSTOM_FOOTER_URL}" target="_blank">
@@ -78,8 +78,7 @@ class Footer extends Component {
             </a>
           </li>
         `);
-      }
-      else if (WEB_UI.CUSTOM_FOOTER_URL != '') {
+      } else if (WEB_UI.CUSTOM_FOOTER_URL != "") {
         footer.push(html`
           <li class="m-2">
             <a href="${WEB_UI.CUSTOM_FOOTER_URL}" target="_blank">
@@ -87,18 +86,16 @@ class Footer extends Component {
             </a>
           </li>
         `);
-      }
-      else if (WEB_UI.CUSTOM_FOOTER_TEXT != '') {
+      } else if (WEB_UI.CUSTOM_FOOTER_TEXT != "") {
         footer.push(html`
           <li class="m-2">
             ${WEB_UI.CUSTOM_FOOTER_TEXT}
           </li>
-        `)
-      }
-      else  {
+        `);
+      } else {
         footer.push(html`
           <li class="m-2">
-            ${translate('footerText')}
+            ${translate("footerText")}
           </li>
         `);
       }
