@@ -1,9 +1,8 @@
-
 stages:
   - test
   - release
 
-# Build Send, run npm tests
+# Build HiberFile, run npm tests
 test:
   stage: test
   image: "node:16-slim"
